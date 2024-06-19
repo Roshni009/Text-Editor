@@ -10,6 +10,7 @@ export default function Form(props) {
      let newText = text.toUpperCase();
         setText(newText);
         props.showAlert(" Now your text capital ", "success");
+  
     }
 
     const handletoLowerCase = () => {
@@ -24,18 +25,20 @@ export default function Form(props) {
           navigator.clipboard.writeText(text.value);
           document.getSelection().removeAllRanges(); //use for to selected text to unselect
           props.showAlert(" Now your text is copy to clipboard ", "success");
+        
        }
 
        const handleExtraSpace = () => {
           let newText = text.split(/[ ]+/);
           setText(newText.join(" "));
-          props.showAlert(" Now your text is removed all extra spaces ", "success");
+          props.showAlert(" Now your text is removed all extera spaces", "success");
        }
 
     const handleToClear = () => {
         let newText = "";
         setText(newText);
         props.showAlert(" clear your text area", "success");
+ 
     }
    
 
